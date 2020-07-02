@@ -1,0 +1,29 @@
+.signin-button {
+    &,
+    &:link,
+    &:visited {
+    display: block;
+    margin-top: 3rem;
+    width: 45%;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    padding: 2rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 2rem rgba(0,0,0, .4);
+    color: #e0fcfb;
+    margin: 0 1.5rem;
+
+    background-image: linear-gradient(45deg, #6255ce 0%, #493bc6 20%, #3f32ad 40%, #352a93 60%, #2c2378 80%);
+    background-size: 225%;
+    transition: all .6s;}
+
+    &:hover {
+        background-position: 100%;
+        transform: scale(1.05);
+        box-shadow: 0 2rem 3rem rgba(0,0,0, .4);
+        cursor: pointer;
+    }
+
+}

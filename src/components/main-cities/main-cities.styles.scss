@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+
+.main-cities {
+    margin-bottom: 10rem;
+    height: 95vh;
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.65), rgba(#271f6b, 0.65)), url('https://i.ibb.co/r6Y19sF/city-1.jpg');
+    background-size: cover;
+    background-position: top;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__heading {
+        padding: 3rem 3rem 0 3rem;
+        font-size: 5rem;
+        color: #ffac22;
+        font-family: 'TitleFont';
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+
+        &--city-1 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: top;
+            margin: 0 3rem;
+            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/5GsWRQR/overlandpark-kansas.jpg');
+            outline: 3px solid #bd7603;
+            outline-offset: 2rem;
+        }
+
+        &--city-2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: top;
+            margin: 0 3rem;
+            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/k9CxyBb/plano.jpg');;
+            outline: 3px solid #bd7603;
+            outline-offset: 2rem;
+        }
+
+        &--city-3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: top;
+            margin: 0 3rem;
+            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/7kcMdfV/32830136856-6b78dbbc5a-o-1522698227.jpg');;
+            outline: 3px solid #bd7603;
+            outline-offset: 2rem;
+        }
+
+        &--name {
+            text-align: center;
+            width: 80%;
+            text-shadow: 0 1rem .6rem rgba(0,0,0,.3);
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(#fff, .5);
+            color: #333;
+            z-index: 5;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        &--description {
+            text-align: center;
+            padding: 0 1rem;
+            padding-bottom: 1rem;
+            color: #eee;
+            font-size: 1.4rem;
+            letter-spacing: 1.5px;
+            margin-top: 12rem;
+
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.features {
+    padding: 15rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 8rem;
+
+    &__content {
+        font-family: 'Lato', sans-serif;
+
+        &--icon {
+            width: 6rem;
+            height: 6rem;
+            fill: #271f6b;
+            margin: 2rem 0;
+        }
+
+        &--heading {
+            color: #271f6b;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        &--paragraph {
+            font-size: 1.5rem;
+            color: #333;
+            letter-spacing: 1px;
+        }
+    }
+}

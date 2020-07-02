@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+.realtors-page {
+    
+    background-image: linear-gradient(to right bottom, #c3bfec 40%, #928bdc 50%);
+
+    &__realtors {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+        grid-gap: 8rem;
+        padding: 5rem 8rem;
+    }
+
+    &__heading {
+        color: #271f6b;
+        padding: 3rem;
+        text-decoration: underline;
+        font-family: 'TitleFont';
+        font-weight: 700;
+        font-size: 5rem;
+    }
+}

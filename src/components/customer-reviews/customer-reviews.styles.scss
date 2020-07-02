@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+.reviews {
+    padding: 4rem;
+    margin-top: 10rem;
+    height: 70vh;
+    background-image: linear-gradient(105deg, rgba(#271f6b, 0.5) 50%, rgba(#0f0c29, .8) 50%), url('https://i.ibb.co/qW5cSBd/relaxing-1979674-1920.jpg');
+    background-size: cover;
+    background-position: top;
+
+    display: flex;
+
+    &__left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &--title {
+            font-size: 5rem;
+            color: #ffac22;
+            font-family: 'TitleFont';
+        }
+    }
+
+    &__right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--text {
+            padding: 4rem 6rem;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            font-size: 4rem;
+            letter-spacing: 3px;
+            color: #eee;
+        }
+    }
+
+    
+}
+

@@ -1,0 +1,69 @@
+.realtor-card {
+    background-color: #0f0c29;
+    padding: 4rem 2rem 0 2rem;
+    position: relative;
+    height: 50rem;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,.5);
+
+    &__img {
+        outline: 3px solid #ffb944;
+        outline-offset: 1.5rem;
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 4;
+    }
+
+    &__details {
+        width: 80%;
+        height: 76.9%;
+        padding: 10rem 3rem 0 3rem;
+        background-color: #eee;
+        position: absolute;
+        top: 11.5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        &--name {
+            font-family: 'Lato', sans-serif;
+            color: #271f6b;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        &--about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--experience {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &__contact {
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        fill: #333;
+        margin-bottom: 2rem;
+    }
+}

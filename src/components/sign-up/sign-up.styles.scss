@@ -1,0 +1,65 @@
+.sign-up {
+    width: 48%;
+    height: 120vh;
+    background-color: #271f6b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+    box-shadow: 2rem 2rem 2rem rgba(0,0,0,.4);
+    text-align: center;
+
+
+    &__logo {
+        height: 30%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__text {
+        font-family: 'Lato', sans-serif;
+        font-size: 4.5rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #eee;
+        font-family: 'Dancing Script', cursive;;
+
+        position: absolute;
+        left: 50%;
+        top: 22rem;
+        transform: translateX(-50%);
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        left: 50%;
+        top: 30rem;
+        transform: translateX(-50%);
+    }
+
+    &__signin {
+        width: 100%;
+        position: absolute;
+        top: 75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        color: #eee;
+        font-family: 'Dancing Script', cursive;
+    }
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: center;
+}
+
+.signin-link {
+    color: #cfccf0;
+}

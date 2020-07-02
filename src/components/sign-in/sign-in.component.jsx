@@ -7,7 +7,7 @@ import {ReactComponent as Logo} from '../../logo.svg';
 import FormInput from '../form-input/form-input.component';
 import SignInButton from '../custom-signin-button/custom-signin-button.component';
 
-import { signInWithGoogle } from '../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../firebase/firebase.utils';
 import { Link } from 'react-router-dom';
 
 class SignIn extends React.Component {
@@ -20,10 +20,19 @@ class SignIn extends React.Component {
         }
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
 
-        this.setState({ email: '', password: ''});
+        const { email, password } = this.state;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({ email: '', password: ''});
+        } catch(error) {
+            console.log(error);
+            alert(error.message);
+        }
+
     }
 
     handleChange = event => {
@@ -51,7 +60,7 @@ class SignIn extends React.Component {
                     </div>
                 </form>
 
-                <h4 className='sign-in__signup'>Don't have an account, Sign Up</h4>
+                <h4 className='sign-in__signup'>Don't have an account, <Link to='/signup' className='signin-link'>Sign Up</Link></h4>
             </div>
         )
     }

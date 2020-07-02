@@ -4,8 +4,9 @@ import './App.scss';
 import HomePage from './pages/home-page/home-page.component';
 import RealtorsPage from './pages/realtors-page/realtors-page.component';
 import SignInAndSignUp from './pages/signin-and-signup-page/signin-and-signup-page.component';
+import SignUpPage from './pages/sign-up-page/sign-up-page.component';
 
-import { auth } from './components/firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './components/firebase/firebase.utils';
  
 import { Switch, Route } from 'react-router-dom';
 
@@ -21,7 +22,27 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {this.setState({ currentUser: user })}
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if(userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapshot => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          })
+
+          console.log(this.state);
+        });
+      }
+
+      else {
+        this.setState({ currentUser: userAuth });
+      }
+
+    }
     );
   }
 
@@ -37,6 +58,7 @@ class App extends React.Component {
           <Route exact path='/' component={ () => <HomePage currentUser={this.state.currentUser} /> }/>
           <Route exact path='/realtors' component={RealtorsPage} />
           <Route exact path='/signin' component={SignInAndSignUp} />
+          <Route exact path='/signup' component={SignUpPage} />
         </Switch>
       </div>
   )};

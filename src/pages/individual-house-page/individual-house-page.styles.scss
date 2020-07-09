@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+.individual-house {
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    justify-content: center;
+    grid-gap: 8rem;
+    background-image: linear-gradient(to right bottom, #271f6b, #0f0c29);
+
+    &__heading {
+        grid-column: 1/ -1;
+        font-family: 'TitleFont';
+        font-weight: 400;
+        font-size: 7rem;
+        color: #ffb944;
+    }
+}

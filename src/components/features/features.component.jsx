@@ -10,7 +10,7 @@ import { ReactComponent as Bungalow } from '../../icons/bungalow.svg';
 import { ReactComponent as Satisfied } from '../../icons/satisfied.svg'; 
 
 const Features = () => (
-    <div className='features'>
+    <div className='features' data-aos="zoom-in-up">
         <div className='features__content'>
             <BestHomes className='features__content--icon' />
             <h4 className='features__content--heading'>Only the best homes to choose from</h4>

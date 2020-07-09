@@ -2,8 +2,8 @@ import React from 'react';
 
 import './custom-button.styles.scss';
 
-const CustomButton = ({ content }) => (
-    <button className='btn'>
+const CustomButton = ({ content, btnClass }) => (
+    <button className={`btn ${btnClass}`}>
         {content}
     </button>
 );

@@ -1,0 +1,47 @@
+@import '../../sass-variables.scss';
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-right: 5rem;
+
+    @media only screen and (max-width: $bp-medium-medium) {
+        padding-right: 2rem;
+    }
+
+
+    &__search {
+        font-size: 1.8rem;
+        padding: 1.4rem;
+        margin-top: 2rem;
+        height: 100%;
+        width: 60%;
+        border-radius: 10000px;
+        outline: none;
+        border: none;
+        margin-top: -.3rem;
+        background-color: rgba(#fff, .8);
+
+        @media only screen and (max-width: $bp-large) {
+            width: 80%;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+
+        &--icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            fill: white;
+            margin: 1rem;
+            cursor: pointer;
+        }
+    }
+    
+
+}

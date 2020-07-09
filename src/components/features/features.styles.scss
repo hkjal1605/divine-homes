@@ -1,9 +1,21 @@
+@import '../../sass-variables.scss';
+
 .features {
     padding: 15rem;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 8rem;
+
+    @media only screen and (max-width: $bp-medium-large) {
+        padding: 9rem;
+        grid-gap: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 4rem;
+        grid-gap: 3rem;
+    }
 
     &__content {
         font-family: 'Lato', sans-serif;

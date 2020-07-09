@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+.house-container {
+
+    &__heading {
+        font-family: 'TitleFont';
+        font-weight: 400;
+        font-size: 5rem;
+        color: #ffb944;
+        padding: 1.5rem 0 1rem 0;
+        text-decoration: underline;
+    }
+}

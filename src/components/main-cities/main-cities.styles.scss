@@ -1,3 +1,5 @@
+@import '../../sass-variables.scss';
+
 @font-face {
     font-family: 'TitleFont';
     src: url('YellowMagician.ttf') format('truetype');
@@ -16,46 +18,46 @@
     align-items: center;
     justify-content: space-around;
 
+    @media only screen and (max-width: $bp-medium) {
+        height: 150vh;
+        margin-bottom: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: 160vh;
+    }
+
+    @media only screen and (max-width: $bp-small-small) {
+        height: 168vh;
+    }
+
     &__heading {
         padding: 3rem 3rem 0 3rem;
         font-size: 5rem;
         color: #ffac22;
         font-family: 'TitleFont';
+
+        @media only screen and (max-width: $bp-small-small) {
+            padding: 2rem .8rem 0 .8rem;
+            font-size: 3.8rem;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: center;
 
-        &--city-1 {
-            width: 100%;
-            display: flex;
+        @media only screen and (max-width: $bp-medium) {
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            background-size: cover;
-            background-position: top;
-            margin: 0 3rem;
-            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/5GsWRQR/overlandpark-kansas.jpg');
-            outline: 3px solid #bd7603;
-            outline-offset: 2rem;
+            padding:0 3rem;
         }
 
-        &--city-2 {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: top;
-            margin: 0 3rem;
-            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/k9CxyBb/plano.jpg');;
-            outline: 3px solid #bd7603;
-            outline-offset: 2rem;
+        @media only screen and (max-width: $bp-small-small) {
+            padding:0 1.5rem;
         }
 
-        &--city-3 {
+        &--city {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -64,9 +66,18 @@
             background-size: cover;
             background-position: top;
             margin: 0 3rem;
-            background-image: linear-gradient(to bottom, rgba(#271f6b, 0.2), rgba(#0f0c29, 0.65)), url('https://i.ibb.co/7kcMdfV/32830136856-6b78dbbc5a-o-1522698227.jpg');;
             outline: 3px solid #bd7603;
             outline-offset: 2rem;
+            position: relative;
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 70%;
+                margin: 3rem 0;
+            }
+
+            @media only screen and (max-width: $bp-small-small) {
+                width: 90%;
+            }
         }
 
         &--name {
@@ -81,17 +92,36 @@
             z-index: 5;
             padding: 2rem;
             margin: 2rem 0;
+            position: absolute;
+            top: -1rem;
         }
 
         &--description {
             text-align: center;
-            padding: 0 1rem;
-            padding-bottom: 1rem;
+            padding: 10rem 1rem 0 1rem; 
             color: #eee;
             font-size: 1.4rem;
             letter-spacing: 1.5px;
             margin-top: 12rem;
 
+            @media only screen and (max-width: $bp-medium) {
+                padding-bottom: 2rem;
+                margin-top: 8rem;
+            }
+
         }
     }
+}
+
+.cleveland {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://imgbbb.com/images/2020/07/03/cleveland-454067_1280.jpg');
+}
+
+.orlando {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://i.ibb.co/3fhsWQf/orlando-981748-1920.jpg');
+}
+
+.dallas {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://imgbbb.com/images/2020/07/03/dallas-1740681_1280.jpg');
+
 }

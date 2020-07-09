@@ -1,3 +1,5 @@
+@import './sass-variables.scss';
+
 *,
 *::after,
 *::before {
@@ -9,10 +11,18 @@
 html {
   font-size: 62.5%;
   background-image: url('../src/images/spikes.png');
+
+  @media only screen and (max-width: $bp-largest) {
+	  font-size: 50%;
+  }
 }
 
 body {
 	box-sizing: border-box;
 	padding: 2rem;
+
+	@media only screen and (max-width: $bp-medium-large) {
+		padding: 0;
+	}
 }
 

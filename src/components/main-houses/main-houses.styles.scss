@@ -1,0 +1,130 @@
+@import '../../sass-variables.scss';
+
+@font-face {
+    font-family: 'TitleFont';
+    src: url('YellowMagician.ttf') format('truetype');
+}
+
+
+.main-houses {
+    margin-bottom: 10rem;
+    height: 95vh;
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.65), rgba(#271f6b, 0.65)), url('https://i.ibb.co/r6Y19sF/city-1.jpg');
+    background-size: cover;
+    background-position: top;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 150vh;
+        margin-bottom: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: 160vh;
+    }
+
+    @media only screen and (max-width: $bp-small-small) {
+        height: 168vh;
+    }
+
+
+    &__heading {
+        padding: 3rem 3rem 0 3rem;
+        font-size: 5rem;
+        color: #ffac22;
+        font-family: 'TitleFont';
+
+        @media only screen and (max-width: $bp-small-small) {
+            padding: 2rem .8rem 0 .8rem;
+            font-size: 3.8rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            align-items: center;
+            padding:0 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small-small) {
+            padding:0 1.5rem;
+        }
+
+        &--house {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: top;
+            margin: 0 3rem;
+            outline: 3px solid #bd7603;
+            outline-offset: 2rem;
+            position: relative;
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 70%;
+                margin: 3rem 0;
+            }
+
+            @media only screen and (max-width: $bp-small-small) {
+                width: 90%;
+            }
+        }
+
+        &--name {
+            text-align: center;
+            width: 80%;
+            text-shadow: 0 1rem .6rem rgba(0,0,0,.3);
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(#fff, .5);
+            color: #333;
+            z-index: 5;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: absolute;
+            top: -1rem;
+        }
+
+        &--description {
+            width: 100%;
+            text-align: center;
+            padding: 10rem 1rem 0 1rem; 
+            color: #eee;
+            font-size: 1.4rem;
+            letter-spacing: 1.5px;
+            margin-top: 12rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                padding-bottom: 2rem;
+                margin-top: 8rem;
+            }
+
+        }
+    }
+}
+
+.Townhouse {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://imgbbb.com/images/2020/07/06/house-2711171_1280.jpg');
+}
+
+.Contemporary {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://imgbbb.com/images/2020/07/06/house-2469067_1280.jpg');
+}
+
+.Modern {
+    background-image: linear-gradient(to bottom, rgba(#0f0c29, 0.5), rgba(#271f6b, 0.85)), url('https://imgbbb.com/images/2020/07/06/beach-house-1907220_1280.jpg');
+
+}

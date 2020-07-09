@@ -1,0 +1,145 @@
+@import '../../sass-variables.scss';
+
+.city-card {
+    background-image: linear-gradient(to right, #271f6b 25%, #1d1850);
+    margin: 3rem 0 0 0;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+    grid-template-rows: repeat(12, [row-start] 1fr [row-end]);
+
+    outline: 1.5px solid #ffb944;
+
+    @media only screen and (max-width: $bp-small-small) {
+        height: 105vh;
+    }
+
+    &__content {
+        grid-column: col-start 1/ col-end 5;
+        grid-row: 1/ -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: col-start 1/ col-end 6;
+            grid-row: 1/ -1;
+        }
+
+        @media only screen and (max-width: $bp-small-small) {
+            grid-column: col-start 1/ col-end 12;
+            grid-row: row-start 1/ row-end 6;
+
+            outline: none;
+        }
+
+        &--heading {
+            font-family: 'Lato', sans-serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: #7971d4;
+            padding: 3rem;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: $bp-small-small) {
+                padding: 0;
+            }
+        }
+
+        &--description {
+            text-align: left;
+            font-size: 1.5rem;
+            padding: 0 2rem;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            color: #eee;
+
+            @media only screen and (max-width: $bp-small-small) {
+                padding: 0 1rem;
+                letter-spacing: .8px;
+            }
+        }
+
+        &--btn-group {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: $bp-small-small) {
+                padding: .8rem;
+            }
+        }
+    }
+
+    &__img {
+
+        &--image-large {
+            grid-column: col-start 7/ col-end 12;
+            grid-row: 1/ -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(80%) blur(2px);
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+        }
+
+        &--image-small {
+            grid-column: col-start 6/ col-end 10;
+            grid-row: row-start 3/ row-end 10;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            z-index: 3;
+            filter: brightness(105%) drop-shadow(.8rem .8rem 1rem rgba(0,0,0,.8));
+
+            outline: 3px solid #ffb944;
+            outline-offset: -2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-column: col-start 7/ col-end 12;
+                grid-row: 1/ -1;
+                filter: none;
+                outline: none;
+            }
+
+            @media only screen and (max-width: $bp-small-small) {
+                grid-column: col-start 1/ col-end 12;
+                grid-row: row-start 8/ row-end 12;
+                filter: none;
+                outline: none;
+            }
+        }
+
+    }
+}
+
+.btn-group__text {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    padding: 1.5rem;
+    color: #ffb944;
+
+    @media only screen and (max-width: $bp-small-small) {
+        font-size: 1.8rem;
+        padding: .6rem;
+    }
+}
+
+.city-btn {
+    width: 100%;
+
+    @media only screen and (max-width: $bp-small-small) {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+}
+

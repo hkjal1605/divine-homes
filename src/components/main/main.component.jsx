@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+
 import './main.styles.scss';
 
 import {ReactComponent as Logo} from '../../logo.svg';
@@ -13,6 +15,8 @@ import { auth } from '../firebase/firebase.utils';
 import { Link } from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
+
+import SearchBox from '../search-box/search-box.component';
 
 const MainContent = ({ currentUser }) => (
     <div className='main'>
@@ -41,7 +45,12 @@ const MainContent = ({ currentUser }) => (
         <div className='main__content'>
             <h1 className='main__content--title'>DIVINE HOMES</h1>
             <p className='main__content--tagline'>Get Ultimate Personal Freedom In Your Own Home</p>
-            <CustomButton content='Find your home'/>
+            <div className='main__content--links'>
+                <Link to='/house' className='link'>
+                    <CustomButton content='Find your home' btnClass='main__content--btn' />
+                </Link>
+                <SearchBox />
+            </div>
         </div>
         <div className='main__seenon--text'>SEEN ON</div>
         <div className='main__seenon--logo'>
@@ -53,4 +62,8 @@ const MainContent = ({ currentUser }) => (
     </div>
 );
 
-export default MainContent;
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(MainContent);

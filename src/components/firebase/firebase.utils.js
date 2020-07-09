@@ -42,6 +42,70 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 }
 
+export const addCityList = async (cityKey, cityListToAdd) => {
+    const cityRef = firestore.collection(cityKey);
+
+    const batch = firestore.batch();
+
+    cityListToAdd.forEach(obj => {
+        const newDocRef = cityRef.doc();
+        batch.set(newDocRef, obj);
+    });
+
+    return await batch.commit();
+}
+
+export const addHouseList = async (houseKey, houseListToAdd) => {
+    const houseRef = firestore.collection(houseKey);
+
+    const batch = firestore.batch();
+
+    houseListToAdd.forEach(obj => {
+        const newDocRef = houseRef.doc();
+        batch.set(newDocRef, obj);
+    });
+
+    return await batch.commit();
+}
+
+export const convertCitySnapshotToMap = (citySnapshot) => {
+    const transformedCityList = citySnapshot.docs.map(doc => {
+        const { title, description, routeName } = doc.data();
+
+        return {
+            id: doc.id,
+            routeName: encodeURI(routeName),
+            title,
+            description
+        }
+    });
+
+    return transformedCityList.reduce((accumulator, collection) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator
+    }, {})
+}
+
+export const convertHouseSnapshotToMap = (houseSnapshot) => {
+    const transformedHouseList = houseSnapshot.docs.map(doc => {
+        const { title, houses, description } = doc.data();
+
+        return {
+            id: doc.id,
+            title: title,
+            routeName: encodeURI(title.toLowerCase()),
+            description,
+            houses
+        }
+    });
+
+    return transformedHouseList.reduce((accumulator, collection) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator
+    }, {})
+}
+
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();

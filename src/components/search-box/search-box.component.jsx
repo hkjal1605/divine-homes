@@ -16,8 +16,8 @@ const SearchBox = ({ handleChange, searchInput, cityList, clearSearch }) => {
         <div className='input'>
             <input className='input__search' id='input-search' type='search' placeholder='Search by City' onChange={(e) => handleChange(e)} />
             {
-                cities.includes(searchInput) ? (
-                    <Link to={`/city/${searchInput}`} >
+                cities.includes(searchInput.toLowerCase()) ? (
+                    <Link to={`/city/${searchInput.toLowerCase()}`} >
                         <Search className='input__search--icon' onClick={() => clearSearch()} />
                     </Link>
                 ) : (

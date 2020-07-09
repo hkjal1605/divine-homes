@@ -1,3 +1,5 @@
+@import '../../sass-variables.scss';
+
 .sign-in {
     width: 38%;
     height: 90vh;
@@ -9,6 +11,14 @@
     border-radius: .5rem;
     box-shadow: 2rem 2rem 2rem rgba(0,0,0,.4);
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium-large) {
+        width: 60%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 90%;
+    }
 
 
     &__logo {

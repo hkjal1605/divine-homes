@@ -9,6 +9,7 @@ import SignInAndSignUp from './pages/signin-and-signup-page/signin-and-signup-pa
 import SignUpPage from './pages/sign-up-page/sign-up-page.component';
 import CityPage from './pages/city-page/city-page.component';
 import HousePage from './pages/house-page/house-page.component';
+import ContactPAge from './pages/contact-page/contact-page.component';
 
 import { auth, createUserProfileDocument } from './components/firebase/firebase.utils';
 
@@ -72,6 +73,7 @@ class App extends React.Component {
                                                   )} />
             <Route path='/city' component={CityPage} />
             <Route path='/house' component={HousePage} />
+            <Route path='/contact' component={ContactPAge} />
           </Switch>
         </div>
       </ScrollToTop>

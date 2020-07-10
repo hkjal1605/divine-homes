@@ -1,3 +1,5 @@
+@import '../../sass-variables.scss';
+
 @font-face {
     font-family: 'TitleFont';
     src: url('YellowMagician.ttf') format('truetype');
@@ -10,7 +12,11 @@
         font-weight: 300;
         font-size: 5rem;
         color: #ffb944;
-        padding: 4rem 0;
+        padding: 6rem 0 0 0;
         text-decoration: underline;
+
+        @media only screen and (max-width: $bp-small-small) {
+            font-size: 4rem;
+        }
     }
 }

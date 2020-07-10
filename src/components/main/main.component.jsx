@@ -23,8 +23,12 @@ const MainContent = ({ currentUser }) => (
         <div className='main__header'>
             <Logo className='main__header--logo' />
             <div className='main__header--options'>
-                <h3 className='main__links'>Home</h3>
-                <h3 className='main__links'>About</h3>
+                <Link to='/' className='link'>
+                    <h3 className='main__links hvr-float hvr-underline-from-center'>Home</h3>
+                </Link>
+                <Link to='/house' className='link'>
+                    <h3 className='main__links hvr-float hvr-underline-from-center'>Properties</h3>
+                </Link>
                 <Link to='/realtors' className='link'>
                     <h3 className='main__links hvr-float hvr-underline-from-center'>Our Realtors</h3>
                 </Link>
@@ -38,7 +42,9 @@ const MainContent = ({ currentUser }) => (
                     )
             
                 }
-                <h3 className='main__links'>Contact</h3>
+                <Link to='/contact' className='link'>
+                    <h3 className='main__links hvr-float hvr-underline-from-center'>Contact</h3>
+                </Link>
             </div>
         </div>
 

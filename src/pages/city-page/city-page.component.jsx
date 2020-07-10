@@ -10,6 +10,8 @@ import { fetchHouseListStartAsync } from '../../redux/house/house.actions';
  
 import IndividualCityPageContainer from '../individual-city-page/individual-city-page.container';
 
+import NavigationButton from '../../components/navigation/navigaton.component';
+
 import './city-page.styles.scss';
 
 class CityPage extends React.Component {
@@ -24,6 +26,8 @@ class CityPage extends React.Component {
         const { match } = this.props;
         return(
             <div className='city-page'>
+                <NavigationButton />
+                
                 <Route exact path = {`${match.path}`} 
                 component={CityListContainer}
                 />

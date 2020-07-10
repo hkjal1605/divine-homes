@@ -4,6 +4,8 @@ import './realtors-page.styles.scss';
 
 import RealtorCard from '../../components/realtor-card/realtor-card.component';
 
+import NavigationButton from '../../components/navigation/navigaton.component';
+
 class RealtorsPage extends React.Component {
     constructor() {
         super();
@@ -23,6 +25,7 @@ class RealtorsPage extends React.Component {
         const { realtors } = this.state;
         return (
             <div className='realtors-page'>
+                <NavigationButton />
                 <h1 className='realtors-page__heading'>WHO HAVE MADE THOUSANDS OF CUSTOMERS HAPPY</h1>
                 <div className='realtors-page__realtors'>
                     {

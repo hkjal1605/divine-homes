@@ -8,6 +8,8 @@ import IndividualHouseCard from '../../components/individual-house-card/individu
 
 import './individual-city-page.styles.scss';
 
+import NavigationButton from '../../components/navigation/navigaton.component';
+
 const IndividualCityPage = ({ city, houseList }) => {
     console.log(city);
     houseList.map(house => house.houses.map(indhouse => {
@@ -17,6 +19,7 @@ const IndividualCityPage = ({ city, houseList }) => {
     }))
     return(
         <div className='individual-city'>
+            <NavigationButton />
             <div className='individual-city-main'>
                 <div className='individual-city-main__content'>
                     <h4 className='individual-city-main__content--heading'>{city.title}</h4>

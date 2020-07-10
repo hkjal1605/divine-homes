@@ -9,6 +9,8 @@ import { fetchHouseListStartAsync } from '../../redux/house/house.actions';
 import HouseListContainer from '../../components/house-list-container/house-list-container.container';
 import IndividualHousePageContainer from '../individual-house-page/individual-house-page.container';
 
+import NavigationButton from '../../components/navigation/navigaton.component';
+
 class HousePage extends React.Component {
 
     componentDidMount() {
@@ -20,6 +22,7 @@ class HousePage extends React.Component {
         const { match } = this.props;
         return(
             <div className='house-page'>
+                <NavigationButton />
                 <Route exact path = {`${match.path}`} 
                 component={HouseListContainer}
                 />

@@ -7,6 +7,8 @@ import IndividualHouseCard from '../../components/individual-house-card/individu
 
 import './individual-house-page.styles.scss';
 
+import NavigationButton from '../../components/navigation/navigaton.component';
+
 
 class IndividualHousePage extends React.Component {
     componentDidMount() {
@@ -17,6 +19,8 @@ class IndividualHousePage extends React.Component {
         const { house, match } = this.props;
         return (
             <div className='individual-house'>
+
+                <NavigationButton />
                 <h2 className='individual-house__heading'>{match.params.houseId.toUpperCase()}</h2>
                 {
                     house.houses.map(house => (

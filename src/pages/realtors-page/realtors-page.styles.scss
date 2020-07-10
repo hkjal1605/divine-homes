@@ -12,15 +12,15 @@
         justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
         grid-gap: 8rem;
-        padding: 5rem 8rem;
+        padding: 3rem 8rem;
     }
 
     &__heading {
         color: #271f6b;
-        padding: 3rem;
+        padding: 10rem 6rem 6rem 0;
         text-decoration: underline;
         font-family: 'TitleFont';
         font-weight: 700;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }

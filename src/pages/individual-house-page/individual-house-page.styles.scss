@@ -3,6 +3,8 @@
     src: url('YellowMagician.ttf') format('truetype');
 }
 
+@import '../../sass-variables.scss';
+
 .individual-house {
     padding: 8rem;
     display: grid;
@@ -17,5 +19,9 @@
         font-weight: 400;
         font-size: 7rem;
         color: #ffb944;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+        }
     }
 }
